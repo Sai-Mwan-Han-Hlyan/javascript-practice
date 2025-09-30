@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function convertToF(celcius) {
+        f = (celcius * 9) / 5 + 32;
+        return f;
+      }
+
+      function convertToC(f) {
+        c = ((f - 32) * 5) / 9;
+        return c;
+      }
+
+      function convertTemp(degrees, unit) {
+        if (unit === "C") {
+          const result = convertToF(degrees);
+          return `${result} F`;
+        } else if (unit === "F") {
+          const result = convertToC(degrees);
+          return `${result} C`;
+        }
+      }
+
+      console.log(convertToF(25));
+      console.log(convertToC(86));
+      console.log(convertTemp(25, "C"));
+      console.log(convertTemp(86, "F"));
+    </script>
+  </body>
+</html>

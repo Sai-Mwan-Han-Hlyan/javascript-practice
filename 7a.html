@@ -7,10 +7,16 @@
   </head>
   <body>
     <script>
-      function function1() {
-        console.log("hello");
-        cosole.log(2 + 2);
+      function greet(name) {
+        if (!name) {
+          console.log("hi there");
+        } else {
+          console.log(`hello ${name}`);
+        }
       }
+
+      greet(`saimwan`);
+      greet();
     </script>
   </body>
 </html>

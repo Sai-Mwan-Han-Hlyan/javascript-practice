@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function mToKm(length) {
+        const km = length * 1.6;
+        return km;
+      }
+
+      function kmToM(length) {
+        const miles = length * 0.625;
+        return miles;
+      }
+
+      function convertLength(length, from, to) {
+        if (from === "miles" && to === "km") {
+          const result = mToKm(length);
+          return `${result} km`;
+        } else if (from === "km" && to === "miles") {
+          const result = kmToM(length);
+          return `${result} miles`;
+        } else {
+          return "invalid unit";
+        }
+      }
+
+      console.log(convertLength(50, "miles", "km"));
+      console.log(convertLength(32, "km", "miles"));
+      console.log(convertLength(32, "feet", "miles"));
+    </script>
+  </body>
+</html>
