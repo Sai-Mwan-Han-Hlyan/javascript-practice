@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      class="js-name"
+      onkeydown="handelKeyDown(event);"
+      placeholder="Name"
+    />
+    <button
+      onclick=" getResult();
+    "
+    >
+      Submit
+    </button>
+    <p class="display"></p>
+    <script>
+      function handelKeyDown(event) {
+        if (event.key === "Enter") {
+          getResult();
+        }
+      }
+      function getResult() {
+        const inputElement = document.querySelector(".js-name");
+        let result = inputElement.value;
+        document.querySelector(
+          ".display"
+        ).innerHTML = `Your name is : ${result}`;
+      }
+    </script>
+  </body>
+</html>

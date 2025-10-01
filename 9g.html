@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="Type something"
+      class="user-input"
+      onkeyup="keyUp()"
+    />
+    <p class="key-up"></p>
+    <script>
+      function keyUp() {
+        const inputElement = document.querySelector(".user-input");
+        let display = inputElement.value;
+        document.querySelector(".key-up").innerHTML = `${display}`;
+      }
+    </script>
+  </body>
+</html>
